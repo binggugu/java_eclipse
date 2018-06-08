@@ -1,0 +1,77 @@
+package Test_1;
+
+public class Exam_3 {
+	private String ownername;
+	private int acountnumber;
+	private int balance;
+	// 필드가 private ==> setter 메서드로 접근
+	// 필드가 public ==> 객체명.필드=값;
+	
+	// 생성자 ==> 기본 생성자, 매개변수 3개
+	public Exam_3() {
+		super();
+	}
+
+	
+	// 매개변수가 있는 생성자
+	public Exam_3(String ownername, int acountnumber, int balance) {
+		super();
+		this.ownername = ownername;
+		this.acountnumber = acountnumber;
+		this.balance = balance;
+	}
+
+	
+	// getter / setter 메서드
+	public String getOwnername() {
+		return ownername;
+	}
+
+	public void setOwnername(String ownername) {
+		this.ownername = ownername;
+	}
+
+	public int getAcountnumber() {
+		return acountnumber;
+	}
+
+	public void setAcountnumber(int acountnumber) {
+		this.acountnumber = acountnumber;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+	
+	// 추가 기능 메서드
+	public void deposit(int amount){
+		this.balance = this.balance + amount;
+	}
+	
+	public void withdraw(int amount){
+		this.balance = this.balance - amount;
+	}
+	
+	// 결과 출력 메서드
+	public String toString() {
+		String resultString = "";
+		resultString += "예금주 이름: " + getOwnername() + "\n";
+		resultString += "계좌번호 " + getAcountnumber() + "\n";
+		resultString += "잔고 " + getBalance() + "\n";
+		return resultString;
+	}
+
+	
+	
+	
+	
+	
+	
+
+	
+
+}

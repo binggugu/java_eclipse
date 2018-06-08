@@ -1,0 +1,33 @@
+package Test_1;
+
+import java.util.Scanner;
+
+public class Exam_2 {
+	public static void main(String[] args) {
+		// 판매원과 매출액 관련 배열
+		int num[][] = new int [3][2]; // 행, 열 => 3개의 행(판매원), 2열(판매번호,매출액)
+		int total = 0;
+		double avg = 0;
+		int i;
+		
+		Scanner scan = new Scanner(System.in);
+		// 입력받은 값 배열에 저장
+		for(i=0; i<num.length; i++){
+			System.out.println("판매원의 번호를 입력하세요: ");
+			num[i][0] = scan.nextInt();
+			System.out.println("판매원 " + num[i][0] + "의 매출액>>");
+			num[i][1] = scan.nextInt();
+		}
+		
+		// 화면에 총액 출력
+		System.out.println("판매들의 매출액");
+		System.out.println("-------------------");
+		for (i=0; i<num.length; i++){
+			System.out.println("판매원" + num[i][0] + num[i][1]);
+		}
+		
+		
+		
+		
+	}
+}

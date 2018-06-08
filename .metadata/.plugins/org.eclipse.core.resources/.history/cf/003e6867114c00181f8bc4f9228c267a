@@ -1,0 +1,51 @@
+package Test_1;
+
+import java.util.Scanner;
+
+public class Exam_2 {
+	public static void main(String[] args) {
+		// 판매원과 매출액 관련 배열
+		int num[][] = new int [3][2]; // 행, 열 => 3개의 행(판매원), 2열(판매번호,매출액)
+		int total = 0;
+		double avg = 0;
+		int i;
+		
+		Scanner scan = new Scanner(System.in);
+		// 입력받은 값 배열에 저장
+		for(i=0; i<num.length; i++){
+			System.out.println("판매원의 번호를 입력하세요: ");
+			num[i][0] = scan.nextInt();
+			System.out.println("판매원 " + num[i][0] + "의 매출액>>");
+			num[i][1] = scan.nextInt();
+		}
+		
+		// 화면에 총액 출력
+		System.out.println("판매원들의 매출액");
+		System.out.println("-------------------");
+		for (i=0; i<num.length; i++){
+			System.out.println("판매원" + num[i][0] + "\t" + num[i][1]);
+		}
+		
+		// 최대/최소 비교
+		int maxsales = num[0][1]; int maxid = 0;
+		int minsales = num[0][1]; int minid = 0;
+		for (i=0; i<num.length; i++){
+			if(num[i][1] > maxsales){
+				maxid = i;
+				maxsales = num[i][1];
+			}
+			if(num[i][1] < minsales){
+				minid = i;
+				minsales = num[i][1];
+			}
+		}
+		
+		// 결과 출력
+		avg = (double) total / 3;
+		System.out.println("총매출액 "+ total + "평균" + avg);
+		System.out.println("최대 매출액 " + maxsales + " " + "판매원" + num[maxid][0]);
+		System.out.println("최소 매출액 " + minsales + " " + "판매원" + num[minid][0]);
+		
+		
+	}
+}

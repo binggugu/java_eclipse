@@ -1,0 +1,14 @@
+package com.hk;
+
+public class Test {
+	
+	public static int getweekinfo (String inputValue){
+		int result = Integer.parseInt(inputValue);
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}
